@@ -22,6 +22,26 @@ $(document).ready(function(){
       });
     } // End if
   });
-});
 
+  // Mobile Menu Click
+  $(".mobile-menu-icon").on("click", function() {
+    $(".mobile-navbar").toggleClass("mobile-navbar-expanded");
+    $("#toggle-icon").toggleClass('fa-times');
+  });
+
+  $(window).click(function () {
+    $(".mobile-navbar").removeClass("mobile-navbar-expanded");
+    $("#toggle-icon").addclass("fa-bars");
+    $("#toggle-icon").removeClass("fa-times");
+  });
+
+  $(".mobile-menu-icon").on('click', function(event) {
+    event.stopPropagation();
+  });
+
+  $(".mobile-navbar").on("click", function(event) {
+    event.stopPropagation();
+  });
+
+});
 

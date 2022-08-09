@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Website</title>
   <!-- gogle font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100&display=swap"
+    rel="stylesheet">
   <!-- jss css -->
   <link rel="stylesheet" href="css/js/main.js">
 
@@ -25,29 +26,76 @@
   <div id="wrapper">
     <!-- navbar css -->
     <nav class="navbar">
-      <a href="wrapper">
-        <img src="images/logo.png" alt="food-logo" />
-      </a>
-      <ul>
-        <li>
-          <a href="#home" class="active">Home</a>
-        </li>
-        <li>
-          <a href="#menu">Menu</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#shope">Shope</a>
-        </li>
-      </ul>
-      <div class="search-box">
-        <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-        <input type="text" placeholder="Search" class="input" />
-        <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i>
-        <span class="cart">2</span>
+      <div class="nav-logo">
+        <a href="#wrapper">
+          <img src="images/logo.png" alt="food-logo" />
+        </a>
       </div>
+
+      <div class="sm-hidden">
+        <div class="flex">
+          <div>
+            <ul>
+              <li>
+                <a href="#home" class="active">Home</a>
+              </li>
+              <li>
+                <a href="#menu">Menu</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a href="#shope">Shope</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+            <input type="text" placeholder="Search" class="input" />
+            <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i>
+            <span class="cart">2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-hidden mobile-navbar">
+        <div class="nav-logo">
+          <a href="#wrapper">
+            <img src="images/logo.png" alt="food-logo" />
+          </a>
+        </div>
+
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+          <input type="text" placeholder="Search" class="input" />
+          <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i>
+          <span class="cart">2</span>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <a href="#home" class="active">Home</a>
+            </li>
+            <li>
+              <a href="#menu">Menu</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#shope">Shope</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="mobile-menu-icon md-hidden">
+        <i class="fa-solid fa-bars" id="toggle-icon"></i>
+      </div>
+
     </nav>
 
     <!-- home section -->
@@ -62,10 +110,11 @@
                 Fast
               </div>
               <div class="div3">
-                <div>Food</div>
+                <div class="food">Food</div>
                 <div>Delivery</div>
               </div>
             </div>
+
             <p class="short-description">
               Sed ut perspiciatis unde omnis iste natus sit<br>
               voluptatem accusantium doloremque laudantium
@@ -85,7 +134,7 @@
           </div>
 
           <div class="div4">
-            <img src="images/3.png" alt="food">
+            <img src="images/food-img.png" alt="food">
           </div>
         </div>
       </div>
@@ -95,7 +144,7 @@
         <div class="menu">
           <div class="basomoti">
             <div class="basomoti-img">
-              <img src="images/b.jpg" alt="food-list">
+              <img src="images/basomoti.png" alt="food-list">
             </div>
             <div class="basomoti-img1">
               <img src="images/b.jpg" alt="food-list">
@@ -105,7 +154,7 @@
           </div>
           <div class="basomoti1">
             <h3 class="biriyani">Basomoti Kacchi Biriyani</h3>
-            <h2 class="taka">৳1,050</h2>
+            <h2 class="price">৳1,050</h2>
             <div class="rating">
               <div>
                 <i class="fa-solid fa-star"></i>
@@ -114,7 +163,7 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
               </div>
-              <div>
+              <div class="reviews">
                 <small>5.0 out of (1256) <b>Reviews</b></small>
               </div>
             </div>
@@ -128,9 +177,9 @@
                 <button class="quantity-btn">10</button>
                 <button class="quantity-btn">20</button>
               </div>
-              <div class="food-cart-section">
-                <div class="wishlist"><i class="fa-solid fa-heart cursor-pointer"></i></div>
-                <div class="add-cart"><i class="cursor-pointer fa-solid fa-cart-shopping"></i></div>
+              <div class="cart-section">
+                <div class="cart-menu"><i class="fa-solid fa-heart cursor-pointer"></i></div>
+                <div class="shopping-cart"><i class="cursor-pointer fa-solid fa-cart-shopping"></i></div>
               </div>
             </div>
           </div>
@@ -142,63 +191,193 @@
       <div class="contanier-padding">
         <h2 class="basomoti-contant">Popular Items</h2>
         <small class="small">Most Ordered Items</small>
-      </div>
-      <div class="product-list">
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <p><button>+ADD</button></p>
-        </div>
-        <div class="card">
-          <img src="images/c.jpg" alt="Denim Jeans" style="width:100%">
-          <h3>Cappuccino</h3>
-          <p>Served with lorem ipsum</p>
-          <p class="price">৳1200</p>
-          <button>+ADD</button>
+
+        <div class="product-list">
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/c.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Cappuccino</h3>
+              <p>Served with lorem ipsum</p>
+              <p class="money">৳1200</p>
+              <p><button>+ ADD</button></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/d.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Basomoti Kacchi Biriyani</h3>
+              <p>Served with lorem ipsum <br>Dolor some amet.. <b>More</b>!</p>
+              <del>৳4999</del> ৳4599
+              <div class="add-cart">
+                <span class="decrease-quantity">-</span>
+                <span class="number">99</span>
+                <span class="increase-quantity">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/c.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Cappuccino</h3>
+              <p>Served with lorem ipsum</p>
+              <p class="money">৳1200</p>
+              <p><button>+ ADD</button></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/d.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Basomoti Kacchi Biriyani</h3>
+              <p>Served with lorem ipsum <br>Dolor some amet.. <b>More</b>!</p>
+              <del class="price">৳4999</del> ৳4599
+              <div class="add-cart">
+                <span class="decrease-quantity">-</span>
+                <span class="number">99</span>
+                <span class="increase-quantity">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/c.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Cappuccino</h3>
+              <p>Served with lorem ipsum</p>
+              <p class="money">৳1200</p>
+              <p><button>+ ADD</button></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/d.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Basomoti Kacchi Biriyani</h3>
+              <p>Served with lorem ipsum <br>Dolor some amet.. <b>More</b>!</p>
+              <del class="price">৳4999</del> ৳4599
+              <div class="add-cart">
+                <span class="decrease-quantity">-</span>
+                <span class="number">99</span>
+                <span class="increase-quantity">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/c.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Cappuccino</h3>
+              <p>Served with lorem ipsum</p>
+              <p class="money">৳1200</p>
+              <p><button>+ ADD</button></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/d.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Basomoti Kacchi Biriyani</h3>
+              <p>Served with lorem ipsum <br>Dolor some amet.. <b>More</b>!</p>
+              <del class="price">৳4999</del> ৳4599
+              <div class="add-cart">
+                <span class="decrease-quantity">-</span>
+                <span class="number">99</span>
+                <span class="increase-quantity">+</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/c.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Cappuccino</h3>
+              <p>Served with lorem ipsum</p>
+              <p class="money">৳1200</p>
+              <p><button>+ ADD</button></p>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="product-image">
+              <img src="images/d.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Basomoti Kacchi Biriyani</h3>
+              <p>Served with lorem ipsum <br>Dolor some amet.. <b>More</b>!</p>
+              <del class="price">৳4999</del> ৳4599
+              <div class="add-cart">
+                <span class="decrease-quantity">-</span>
+                <span class="number">99</span>
+                <span class="increase-quantity">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product-image">
+              <img src="images/c.jpg" alt="product-image" style="width:100%">
+            </div>
+            <div class="discount-offer">
+              <span>25% OFF</span>
+            </div>
+            <div class="menu-title">
+              <h3>Cappuccino</h3>
+              <p>Served with lorem ipsum</p>
+              <p class="money">৳1200</p>
+              <p><button>+ ADD</button></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -210,29 +389,148 @@
         <small class="small">Need to experienced and skilled hand with cstom it projects?
           <br>Fill out the form to get consulation.
         </small>
-        <div class="contact-form">
-          <form>
-            <input type="text" name="" id="" placeholder="Your Company Name">
-            <input type="text" name="" id="" placeholder="Nature of Business">
-            <input type="text" name="" id="" placeholder="Address">
-            <input type="text" name="" id="" placeholder="Post Code">
-            <input type="text" name="" id="" placeholder="Contact Name">
-            <input type="text" name="" id="" placeholder="Contact Number">
-            <input type="text" name="" id="" placeholder="Email">
-            <div class="checkbox">
-              <input type="checkbox" class="">
-              <label for=""> I want to protect my data by signing an NDA</label>
+        <div class="area">
+          <div class="contact-form">
+            <form>
+              <div class="input-area">
+                <input type="text" placeholder="Your Company Name">
+                <input type="text" placeholder="Nature of Business">
+                <div class="post-cord">
+                  <input type="text" placeholder="Address">
+                  <input type="text" placeholder="Post Code">
+                </div>
+                <input type="text" placeholder="Contact Name">
+                <input type="text" placeholder="Contact Number">
+                <input type="text" placeholder="email@gmail">
+                <input type="text" placeholder="Linkedin">
+                <input type="text" placeholder="Let's talk about your idea">
+
+              </div>
+              <div class="checkbox">
+                <input type="checkbox">
+                <label for=""> I want to protect my data by signing an NDA</label>
+              </div>
+              <button class="contact-submit">Submit</button>
+            </form>
+          </div>
+          <div class="location">
+            <h4>Address</h4>
+            <p class="location-details">
+              Khanpur jame mosjid,Ishwargong,Mymensingh
+            </p>
+            <div class="location-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21111.204775855436!2d90.63183922807836!3d24.667511509681418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3756f7c192d1961b%3A0xe47710e14aeeb203!2sKhanpur%20jame%20mosjid!5e0!3m2!1sen!2sbd!4v1654327982987!5m2!1sen!2sbd"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <button class="btn contact-submit">Submit</button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- js file -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <script src="css/js/jquery.min.js"></script>
-    <script src="css/js/main.js"></script>
+    <!--Footer Section -->
+    <section class="home-section" id="shope">
+      <div class="contanier-padding">
+        <footer>
+          <div class="border">
+            <img src="images/sss.png">
+          </div>
+
+          <div class="footer-inner">
+            <div class="subscription">
+              <h5>Subscribe to our<br>
+                newsletter</h5>
+              <div class="subscription-form">
+                <input type="email" name="" id="" placeholder="Email address">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+
+            <div class="list-iteam">
+              <h6 class="footer-submenu-title">Services</h6>
+              <ul>
+                <li>
+                  <a href="#">Email Banking</a>
+                </li>
+                <li>
+                  <a href="#">Campaigns</a>
+                </li>
+                <li>
+                  <a href="#">Banding</a>
+                </li>
+                <li>
+                  <a href="#">Team</a>
+                </li>
+                <li>
+                  <a href="#">Offline</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="list-iteam">
+              <h6 class="footer-submenu-title">About</h6>
+              <ul>
+                <li>
+                  <a href="#">Our story</a>
+                </li>
+                <li>
+                  <a href="#">Benefits</a>
+                </li>
+                <li>
+                  <a href="#">Banding</a>
+                </li>
+                <li>
+                  <a href="#">Teem</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="list-iteam">
+              <h6 class="footer-submenu-title">Help</h6>
+              <ul>
+                <li>
+                  <a href="#">FAQs</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+            </div>
+
+          </div>
+
+          <div class="footer-policy">
+            <div class="terms">
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+              <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+      </footer>
+
+  </div>
+  </section>
+
+
+  <!-- js file -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
   </div>
 </body>
 
